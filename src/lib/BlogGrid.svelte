@@ -17,9 +17,7 @@
 
 	const handleDeletePost = (event) => {
 		let pos = $posts.findIndex((inx) => inx.id === event.detail.id);
-		console.log(pos);
 		$posts.splice(pos, 1);
-
 		posts.addPost([...$posts]);
 	};
 	const handleShowPost = (event) => {
@@ -38,7 +36,6 @@
 		let pos = $posts.findIndex((inx) => inx.id === id);
 		postForEditing = $posts[pos];
 		postForEditing.likes+=counter
-		console.log(postForEditing);
 	
 	};
 	const hidePostPreview=()=>{
