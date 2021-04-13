@@ -31,6 +31,8 @@
 	export let likes = 0;
 	export let date = '';
 
+
+
 	let errors = { postTitle: '', sortDesc: '', category: '', content: '' };
 	let valid = false;
 
@@ -113,10 +115,12 @@
 		valid = validate();
 
 		if (valid) {
+		
 			db.collection('posts').doc(id).update(editedPost);
 			let pos = $posts.findIndex((inx) => inx.id === event.detail.id);
 			$posts.splice(pos, 1);
-			posts.addPost([...$posts].editedPost);
+			
+			posts.addPost([...$posts],editedPost);
 
 			showForm = !showForm;
 			postTitle = '';

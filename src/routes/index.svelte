@@ -2,6 +2,7 @@
 	import Counter from '$lib/Counter.svelte';
 	import BlogGrid from '$lib/BlogGrid.svelte';
 	import Navbar from '$lib/Navbar.svelte';
+
 	
 
 	import { db } from '../firebase';
@@ -13,8 +14,8 @@
 	let showForm;
 	let author;
 	
-
 	
+
 	const showNewPostForm = (event) => {
 		isEditing = event.detail.isEditing;
 		showForm = event.detail.showForm;

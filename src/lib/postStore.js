@@ -1,15 +1,8 @@
 import { writable } from 'svelte/store'
 
-function createStore() {
+function postsStore() {
     const { subscribe, set, update } = writable([{
-        // author: "Theodora Dimitrova",
-        // category: "fitness",
-        // content: "erferwfew4frwef",
-        // date:1617883362855,
-        // imageURL: "",
-        // likes: 0,
-        // postTitle: "vgbfrvdr",
-        // sortDesc: "refw4eafre"
+       
     }])
 
     return {
@@ -20,4 +13,4 @@ function createStore() {
 
 
 }
-export const posts = createStore()
+export const posts = postsStore()

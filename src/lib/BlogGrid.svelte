@@ -3,8 +3,9 @@
 	import BlogCard from '$lib/BlogCard.svelte';
 	import PostPreview from '$lib/PostPreview.svelte';
 	import { Row, Col, Container } from 'sveltestrap';
-	import { posts } from './postStore';
+    import {posts} from './postStore'
 
+ 
 	export let showForm=false;
 	export let author;
 	export let isEditing=false;
